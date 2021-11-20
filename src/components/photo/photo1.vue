@@ -1,0 +1,282 @@
+<template>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="container-general">
+                    <div class="gallery-wrap wrap-effect-1">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container-general">
+                    <div class="gallery-wrap wrap-effect-2">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container-general">
+                    <div class="gallery-wrap wrap-effect-3">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container-general wrap-effect-4">
+                    <div class="gallery-wrap">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div> <!-- 上一个 -->
+        <div class="swiper-button-next"></div> <!-- 下一个 -->
+    </div>
+
+
+
+</template>
+
+<script>
+    import Swiper from 'swiper'
+    export default {
+        name: "recipe3",
+        data() {
+            return {}
+        },
+        mounted() {
+            const swiper = new Swiper('.swiper-container', {
+                // direction: 'vertical',
+                mousewheel: {},
+                autoplay: true,
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'cube',
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: false
+                }
+            });
+        }
+    }
+</script>
+
+<style scoped>
+    @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+
+    .swiper-container {
+        width: 100%;
+        height: 90%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        background: #fff;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-general {
+        padding: 75px 0;
+        margin: 0 auto;
+        width: 800px;
+    }
+
+    .container-general .gallery-wrap {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 70vh;
+    }
+
+    .container-general .gallery-wrap .item {
+        flex: 1;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        transition: all 0.8s ease;
+    }
+
+    .container-general .gallery-wrap .item:hover {
+        flex: 7;
+    }
+
+    .wrap-effect-1 .item:first-of-type {
+        /* background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4185141/galshir-cactus-coffee.png"); */
+        background-image: url('../../assets/img/10.jpg');
+    }
+
+    .wrap-effect-1 .item:nth-of-type(2) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/6146136/galshir-tea-biscuit_2x.png");
+    }
+
+    .wrap-effect-1 .item:nth-of-type(3) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4473482/galshir-dog-walker.gif");
+    }
+
+    .wrap-effect-1 .item:nth-of-type(4) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5743606/gal-shir-scooter_2x.png");
+    }
+
+    .wrap-effect-1 .item:last-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4738104/galshir-storytime.png");
+    }
+
+    .wrap-effect-2 .item:hover {
+        transform: translate3d(0, 0, 100px);
+        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+        filter: saturate(2) contrast(120%);
+    }
+
+    .wrap-effect-2 .item:first-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4854597/galshir-umbrella.jpg");
+    }
+
+    .wrap-effect-2 .item:nth-of-type(2) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4776189/galshir-genesis.png");
+    }
+
+    .wrap-effect-2 .item:nth-of-type(3) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5329211/galshir-walking.gif");
+    }
+
+    .wrap-effect-2 .item:nth-of-type(4) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4611698/galshir-paper-boat.png");
+    }
+
+    .wrap-effect-2 .item:last-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4544774/galshir-window.png");
+    }
+
+    .wrap-effect-3 .item:hover {
+        animation: rotate 0.7s ease-in-out both;
+        border-radius: 10px;
+        border: 1px solid gray;
+    }
+
+    .wrap-effect-3 .item:first-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5947483/galshir-wind_2x.png");
+    }
+
+    .wrap-effect-3 .item:nth-of-type(2) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5754705/galshir-rain_2x.png");
+    }
+
+    .wrap-effect-3 .item:nth-of-type(3) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5355160/galshir-attack.gif");
+    }
+
+    .wrap-effect-3 .item:nth-of-type(4) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4742049/galshir-samurai.png");
+    }
+
+    .wrap-effect-3 .item:last-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5594777/galshir-winter-cycling_2x.jpg");
+    }
+
+    .wrap-effect-4 .item:hover {
+        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+        filter: saturate(2) contrast(120%);
+    }
+
+    .wrap-effect-4 .item:first-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4226693/galshir-iphone-x-lemonade.gif");
+    }
+
+    .wrap-effect-4 .item:nth-of-type(2) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4475663/galshir-musical-instruments.gif");
+    }
+
+    .wrap-effect-4 .item:nth-of-type(3) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5431797/galshir-lemonade-ring.gif");
+    }
+
+    .wrap-effect-4 .item:nth-of-type(4) {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4419736/galshir-lemonade-bike.gif");
+    }
+
+    .wrap-effect-4 .item:last-of-type {
+        background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4281500/galshir-lemonade-camera.gif");
+    }
+
+    .inspire {
+        border: 1px solid rgba(22, 76, 167, 0.6);
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .inspire:after {
+        background: #38ef7d;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: 0.4;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -10;
+    }
+
+    .inspire:hover:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+
+        25% {
+            transform: rotate(10deg) translate3d(0, 0, 0);
+        }
+
+        50% {
+            transform: rotate(-10deg) translate3d(0, 0, 0);
+        }
+
+        75% {
+            transform: rotate(5deg) translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+    }
+</style>
